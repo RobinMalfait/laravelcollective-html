@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Laravelcollecive</title>
+    <link rel="shortcut icon" href="http://laravelcollective.com/coming-soon/img/favicon.png">
+    <link rel="stylesheet" href="public/css/app.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <header class="centered-navigation" role="banner">
+        <div class="centered-navigation-wrapper">
+            <a href="javascript:void(0)" class="mobile-logo">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
+            </a>
+            <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+            <nav role="navigation">
+                <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+                    <li class="nav-link"><a href="javascript:void(0)">Home</a></li>
+                    <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+                    <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+                    <li class="nav-link logo">
+                        <a href="javascript:void(0)" class="logo">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
+                        </a>
+                    </li>
+                    <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
+                    <li class="nav-link more"><a href="javascript:void(0)">More</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)">Submenu Item</a></li>
+                            <li><a href="javascript:void(0)">Another Item</a></li>
+                            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+                                <ul class="submenu">
+                                    <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
+                                    <li><a href="javascript:void(0)">Another Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="more"><a href="javascript:void(0)">Another submenu</a>
+                                <ul class="submenu">
+                                    <li><a href="javascript:void(0)">Sub-submenu</a></li>
+                                    <li><a href="javascript:void(0)">An Item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="js-menu sliding-menu-content">
+        <ul>
+            <li><a href="javascript:void(0)">HTML</a></li>
+            <li><a href="javascript:void(0)">Annotations</a></li>
+            <li><a href="javascript:void(0)">Some Other Package</a></li>
+        </ul>
+    </nav>
+
+    <div class="js-menu-screen sliding-menu-fade-screen"></div>
+
+    <div class="row">
+        <div class="span12">
+            <button type="button" class="js-menu-trigger sliding-menu-button">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
+            </button>
+            <article>
+                <h1>Installation</h1>
+                <ul>
+                    <li><a href="#install-composer">Install Composer</a></li>
+                    <li><a href="#install-laravel">Install Laravel</a></li>
+                    <li><a href="#server-requirements">Server Requirements</a></li>
+                    <li><a href="#configuration">Configuration</a></li>
+                    <li><a href="#pretty-urls">Pretty URLs</a></li>
+                </ul>
+                <p><a name="install-composer"></a></p>
+                <h2><a href="#install-composer">Install Composer</a></h2>
+                <p>Laravel utilizes <a href="http://getcomposer.org">Composer</a> to manage its dependencies. First, download a copy of the <code class=" language-php">composer<span class="token punctuation">.</span>phar</code>. Once you have the PHAR archive, you can either keep it in your local project directory or move to <code class=" language-php">usr<span class="token operator">/</span>local<span class="token operator">/</span>bin</code> to use it globally on your system. On Windows, you can use the Composer <a href="https://getcomposer.org/Composer-Setup.exe">Windows installer</a>.</p>
+                <p><a name="install-laravel"></a></p>
+                <h2><a href="#install-laravel">Install Laravel</a></h2>
+                <h3>Via Laravel Installer</h3>
+                <p>First, download the Laravel installer using Composer.</p>
+                <pre class=" language-php"><code class=" language-php">composer <span class="token keyword">global</span> <span class="token keyword">require</span> <span class="token string">"laravel/installer=~1.1"</span></code></pre>
+                <p>Make sure to place the <code class=" language-php"><span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>composer<span class="token operator">/</span>vendor<span class="token operator">/</span>bin</code> directory in your PATH so the <code class=" language-php">laravel</code> executable is found when you run the <code class=" language-php">laravel</code> command in your terminal.</p>
+                <p>Once installed, the simple <code class=" language-php">laravel <span class="token keyword">new</span></code> command will create a fresh Laravel installation in the directory you specify. For instance, <code class=" language-php">laravel <span class="token keyword">new</span> <span class="token class-name">blog</span></code> would create a directory named <code class=" language-php">blog</code> containing a fresh Laravel installation with all dependencies installed. This method of installation is much faster than installing via Composer.</p>
+                <h3>Via Composer Create-Project</h3>
+                <p>You may also install Laravel by issuing the Composer <code class=" language-php">create<span class="token operator">-</span>project</code> command in your terminal:</p>
+                <pre class=" language-php"><code class=" language-php">composer create<span class="token operator">-</span>project laravel<span class="token operator">/</span>laravel <span class="token string">"4.2"</span> <span class="token operator">--</span>prefer<span class="token operator">-</span>dist</code></pre>
+                <h3>Via Download</h3>
+                <p>Once Composer is installed, download the <a href="https://github.com/laravel/laravel/archive/v.4.2.0.zip">4.2 version</a> of the Laravel framework and extract its contents into a directory on your server. Next, in the root of your Laravel application, run the <code class=" language-php">php composer<span class="token punctuation">.</span>phar install</code> (or <code class=" language-php">composer install</code>) command to install all of the framework's dependencies. This process requires Git to be installed on the server to successfully complete the installation.</p>
+                <p>If you want to update the Laravel framework, you may issue the <code class=" language-php">php composer<span class="token punctuation">.</span>phar update</code> command.</p>
+                <p><a name="server-requirements"></a></p>
+                <h2><a href="#server-requirements">Server Requirements</a></h2>
+                <p>The Laravel framework has a few system requirements:</p>
+                <ul>
+                    <li>PHP &gt;= 5.4</li>
+                    <li>MCrypt PHP Extension</li>
+                </ul>
+                <p>As of PHP 5.5, some OS distributions may require you to manually install the PHP JSON extension. When using Ubuntu, this can be done via <code class=" language-php">apt<span class="token operator">-</span>get install php5<span class="token operator">-</span>json</code>.</p>
+                <p><a name="configuration"></a></p>
+                <h2><a href="#configuration">Configuration</a></h2>
+                <p>The first thing you should do after installing Laravel is set your application key to a random string. If you installed Laravel via Composer, this key has probably already been set for you by the <code class=" language-php">key<span class="token punctuation">:</span>generate</code> command. Typically, this string should be 32 characters long. The key can be set in the <code class=" language-php">app<span class="token punctuation">.</span>php</code> configuration file. <strong>If the application key is not set, your user sessions and other encrypted data will not be secure.</strong></p>
+                <p>Laravel needs almost no other configuration out of the box. You are free to get started developing! However, you may wish to review the <code class=" language-php">app<span class="token operator">/</span>config<span class="token operator">/</span>app<span class="token punctuation">.</span>php</code> file and its documentation. It contains several options such as <code class=" language-php">timezone</code> and <code class=" language-php">locale</code> that you may wish to change according to your application.</p>
+                <p>Once Laravel is installed, you should also <a href="/docs/configuration#environment-configuration">configure your local environment</a>. This will allow you to receive detailed error messages when developing on your local machine. By default, detailed error reporting is disabled in your production configuration file.</p>
+                <blockquote>
+                    <p><strong>Note:</strong> You should never have <code class=" language-php">app<span class="token punctuation">.</span>debug</code> set to <code class=" language-php"><span class="token boolean">true</span></code> for a production application. Never, ever do it.</p>
+                </blockquote>
+                <p><a name="permissions"></a></p>
+                <h3>Permissions</h3>
+                <p>Laravel may require one set of permissions to be configured: folders within <code class=" language-php">app<span class="token operator">/</span>storage</code> require write access by the web server.</p>
+                <p><a name="paths"></a></p>
+                <h3>Paths</h3>
+                <p>Several of the framework directory paths are configurable. To change the location of these directories, check out the <code class=" language-php">bootstrap<span class="token operator">/</span>paths<span class="token punctuation">.</span>php</code> file.</p>
+                <p><a name="pretty-urls"></a></p>
+                <h2><a href="#pretty-urls">Pretty URLs</a></h2>
+                <h3>Apache</h3>
+                <p>The framework ships with a <code class=" language-php"><span class="token keyword">public</span><span class="token operator">/</span><span class="token punctuation">.</span>htaccess</code> file that is used to allow URLs without <code class=" language-php">index<span class="token punctuation">.</span>php</code>. If you use Apache to serve your Laravel application, be sure to enable the <code class=" language-php">mod_rewrite</code> module.</p>
+                <p>If the <code class=" language-php"><span class="token punctuation">.</span>htaccess</code> file that ships with Laravel does not work with your Apache installation, try this one:</p>
+<pre class=" language-php"><code class=" language-php">Options <span class="token operator">+</span>FollowSymLinks
+    RewriteEngine On
+
+    RewriteCond <span class="token operator">%</span><span class="token punctuation">{</span><span class="token constant">REQUEST_FILENAME</span><span class="token punctuation">}</span> <span class="token operator">!</span><span class="token operator">-</span>d
+    RewriteCond <span class="token operator">%</span><span class="token punctuation">{</span><span class="token constant">REQUEST_FILENAME</span><span class="token punctuation">}</span> <span class="token operator">!</span><span class="token operator">-</span>f
+    RewriteRule <span class="token operator">^</span> index<span class="token punctuation">.</span>php <span class="token punctuation">[</span>L<span class="token punctuation">]</span></code></pre>
+                <h3>Nginx</h3>
+                <p>On Nginx, the following directive in your site configuration will allow "pretty" URLs:</p>
+<pre class=" language-php"><code class=" language-php">location <span class="token operator">/</span> <span class="token punctuation">{</span>
+    try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span><span class="token variable">$query_string</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+            </article>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="footer-logo">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+        </div>
+        <ul>
+            <li><a href="javascript:void(0)">About</a></li>
+            <li><a href="javascript:void(0)">Contact</a></li>
+            <li><a href="javascript:void(0)">Products</a></li>
+        </ul>
+
+        <div class="footer-secondary-links">
+            <ul>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+            </ul>
+
+            <ul class="footer-social">
+                <li><a href="javascript:void(0)">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+                </a></li>
+                <li><a href="javascript:void(0)">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+                </a></li>
+                <li><a href="javascript:void(0)">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
+            $('#js-centered-navigation-menu').removeClass("show");
+
+            menuToggle.on('click', function(e) {
+                e.preventDefault();
+                $('#js-centered-navigation-menu').slideToggle(function(){
+                    if($('#js-centered-navigation-menu').is(':hidden')) {
+                        $('#js-centered-navigation-menu').removeAttr('style');
+                    }
+                });
+            });
+
+            // Menu
+            $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
+                $('.js-menu,.js-menu-screen').toggleClass('is-visible');
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
