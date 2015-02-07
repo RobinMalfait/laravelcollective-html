@@ -1,3 +1,6 @@
+// General
+$font-family: 'Nunito';
+
 // Grid
 $gridColumns: 12;
 
@@ -32,14 +35,31 @@ $footer-link-color: transparentize($footer-color, 0.6);
 $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
 // Hero
-///////////////////////////////////////////////////////////////////////////////////
 $base-border-radius: 3px !default;
 $base-accent-color: #477DCA !default;
 $large-screen: em(860) !default;
-//////////////////////////////////////////////////////////////////////////////////
 
 $hero-background-top: #7F99BE;
 $hero-background-bottom: #20392B;
 $hero-color: white;
 $gradient-angle: 10deg;
 $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+
+// Cards
+$base-border-color: gainsboro !default;
+$base-border-radius: 3px !default;
+$base-background-color: white !default;
+$base-spacing: 1.5em !default;
+$base-accent-color: #477DCA !default;
+$base-link-color: $base-accent-color !default;
+$dark-gray: #333 !default;
+$base-font-color: $dark-gray !default;
+
+$card-border-color: $base-border-color;
+$card-border: 1px solid $card-border-color;
+$card-background: lighten($card-border-color, 10%);
+$card-header-background: $card-background;
+$card-hover-background: lighten($card-background, 5%);
+$card-image-background: #DBD199;
+$card-image-hover-background: lighten($card-image-background, 5%);
+$card-margin: 1em;
